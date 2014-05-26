@@ -14,7 +14,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Aaronbullard\\Litmus": "src/Aaronbullard"
+            "Litmus": "src/Aaronbullard"
         }
     },
     "minimum-stability": "stable"
