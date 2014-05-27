@@ -1,6 +1,6 @@
 <?php namespace LitmusPHP\Services;
 
-use InvalidArguementException;
+use InvalidArgumentException;
 use GuzzleHttp\Client as Http;
 
 class LitmusService{
@@ -25,7 +25,7 @@ class LitmusService{
 		foreach($params as $param)
 		{
 			if( !in_array($param, static::$param_list)){
-				throw new InvalidArguementException($param." is not a valid parameter");
+				throw new InvalidArgumentException($param." is not a valid parameter");
 			}
 		}
 
