@@ -61,7 +61,7 @@ class LitmusService{
 
 	protected function sendHttp()
 	{
-		return $this->http->post(LitmusServive::URL, $this->params);
+		return $this->http->post(static::URL, $this->params);
 	}
 
 	protected function validateResponseCode($code)

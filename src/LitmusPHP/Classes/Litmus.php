@@ -1,13 +1,13 @@
 <?php namespace LitmusPHP\Classes;
 
-use GuzzleHttp\Client;
+use GuzzleHttp\Client as Http;
 use LitmusPHP\Services\LitmusService;
 
 class Litmus{
 
 	public function __construct($username, $password)
 	{
-		$service = new LitmusService(new GuzzleHttp\Client);
+		$service = new LitmusService(new Http);
 		
 		$service->setCredentials($username, $password);
 
