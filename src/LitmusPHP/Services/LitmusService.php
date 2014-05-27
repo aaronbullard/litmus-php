@@ -22,9 +22,9 @@ class LitmusService{
 
 	public function create(array $params = [])
 	{
-		foreach($params as $param)
+		foreach($params as $key => $param)
 		{
-			if( !in_array($param, static::$param_list)){
+			if( !in_array($key, static::$param_list)){
 				throw new InvalidArgumentException($param." is not a valid parameter");
 			}
 		}
