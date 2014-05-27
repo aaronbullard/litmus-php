@@ -5,7 +5,6 @@ use GuzzleHttp\Client as Http;
 
 class LitmusService{
 
-	const URL = 'http://api.litmusapi.com';
 	protected $http;
 
 	protected $username;
@@ -59,9 +58,24 @@ class LitmusService{
 		return $this;
 	}
 
+	protected function login()
+	{
+		return $this->http->post('/users', [
+				'email'		=> $this->username,
+				'password'	=> $this->password
+			]);
+	}
+
 	protected function sendHttp()
 	{
-		return $this->http->post(static::URL, $this->params);
+		$image = $this->params['image'];
+		
+		unset($this->params['image']);
+
+		return $this->http->post('/images')
+			->setPostFields($image)
+			->addPostFiles(array('image' => $this->params['image']))
+			->send()->getBody();
 	}
 
 	protected function validateResponseCode($code)
