@@ -3,9 +3,9 @@
 use GuzzleHttp\Client as Http;
 use LitmusPHP\Services\LitmusService;
 
-class Litmus{
+class LitmusFactory{
 
-	public function __construct($username, $password)
+	public static function start($username, $password)
 	{
 		$service = new LitmusService(new Http);
 		

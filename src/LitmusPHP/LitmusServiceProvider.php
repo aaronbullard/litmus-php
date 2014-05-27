@@ -19,7 +19,7 @@ class LitmusServiceProvider extends ServiceProvider {
 	public function register()
 	{
 		$loader = \Illuminate\Foundation\AliasLoader::getInstance();
-		$loader->alias('Litmus', 'LitmusPHP\Classes\Litmus');
+		$loader->alias('Litmus', 'LitmusPHP\Classes\LitmusFactory');
 	}
 
 	/**
