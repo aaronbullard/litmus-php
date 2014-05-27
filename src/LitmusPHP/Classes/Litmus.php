@@ -1,7 +1,7 @@
-<?php namespace Litmus\Classes;
+<?php namespace LitmusPHP\Classes;
 
 use GuzzleHttp\Client;
-use Litmus\Services\LitmusService;
+use LitmusPHP\Services\LitmusService;
 
 class Litmus{
 

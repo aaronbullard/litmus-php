@@ -1,4 +1,4 @@
-<?php namespace Litmus\Services;
+<?php namespace LitmusPHP\Services;
 
 use InvalidArguementException;
 use GuzzleHttp\Client as Http;

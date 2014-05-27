@@ -1,4 +1,4 @@
-<?php namespace Litmus;
+<?php namespace LitmusPHP;
 
 use Illuminate\Support\ServiceProvider;
 
